@@ -1,0 +1,29 @@
+{
+  "name": "translator_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "lite-server",
+    "css": "node-sass --include-path scss style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dulko-dev/translator_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dulko-dev/translator_js/issues"
+  },
+  "homepage": "https://github.com/dulko-dev/translator_js#readme",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "lite-server": "^2.6.1",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,21 @@
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .first-template {
+    display: flex;
+  }
+  #postText,
+  #outputText {
+    display: block;
+    width: 100%;
+  }
+  #lang {
+    display: block;
+  }
+  .btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+}
