@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "lite-server",
-    "css": "node-sass --include-path scss style.scss style.css"
+    "css": "node-sass --include-path scss style.scss style.css",
+    "watch": "nodemon -e scss -x npm run css"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
   "dependencies": {
     "axios": "^0.21.4",
     "lite-server": "^2.6.1",
-    "node-sass": "^6.0.1"
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0"
