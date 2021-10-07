@@ -1,33 +1,16 @@
-export default function translator() {
-  const btn = document.querySelector(".btn");
-  const select = document.querySelector("select");
+const translator = () => {
+  const firstTextArea = document.querySelector("#postText");
+  const secondTextArea = document.querySelector("#outputText");
+  const text = document.querySelector('#outputText > p')
 
-  const getLanguageSource = async (e) => {
-    e.preventDefault();
-    const textInput = document.querySelector("#postText").value;
-    const res = await fetch("https://libretranslate.de/detect", {
-      method: "POST",
-      body: JSON.stringify({
-        q: textInput,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+  firstTextArea.addEventListener("input", () => {
+    secondTextArea.innerText = firstTextArea.value;
+  });
 
-  };
+  // setTimeout(() => {
+  //   text.classList.remove('hide-text', 'skeleton')
+  // },3000)
 
-  btn.addEventListener("click", getLanguageSource);
+};
 
-  async function languages() {
-    const res = await fetch("https://libretranslate.com/languages");
-    const result = await res.json();
-    // let option = document.createElement('option')
-    const lang = `${result.map((lang) => `<option>${lang.name}</option>`)}`;
-    select.innerHTML = lang;
-    // select.appendChild(option)
-  }
-
-  return {
-    getLanguageSource,
-    languages,
-  };
-}
+export default translator;

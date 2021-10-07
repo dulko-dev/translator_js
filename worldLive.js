@@ -1,14 +1,33 @@
 const worldLive = () => {
   const inputText = document.getElementById("postText");
-  const wordCount = document.querySelector(".word-count");
-  const characterCount = document.querySelector(".character-count");
+  const outputText = document.getElementById("outputText");
+  const wordCountIn = document.querySelector(".word-count-input");
+  const characterCountIn = document.querySelector(".character-count-input");
+  const wordCountOut = document.querySelector(".word-count-output");
+  const characterCountOut = document.querySelector(".character-count-output");
 
   inputText.addEventListener("input", () => {
-    characterCount.innerText = inputText.value.length;
+    characterCountIn.innerText = inputText.value.length;
 
     let text = inputText.value.trim();
     let regex = /\s+/;
-    wordCount.innerHTML = text.split(regex).length;
+    if (text.length === 0) {
+      wordCountIn.innerText = 0;
+    } else {
+      wordCountIn.innerHTML = text.split(regex).length;
+    }
+  });
+
+  outputText.addEventListener("input", () => {
+    characterCountOut.innerText = outputText.value.length;
+
+    let text = inputText.value.trim();
+    let regex = /\s+/;
+    if (text.length === 0) {
+      wordCountOut.innerText = 0;
+    } else {
+      wordCountOut.innerHTML = text.split(regex).length;
+    }
   });
 };
 
