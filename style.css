@@ -19,12 +19,12 @@ body {
       color: #000000;
       background: #ffffff;
       height: 202px; }
-    body .content #outputText > p.skeleton {
+    body .content #outputText.skeleton {
       position: relative;
       color: transparent;
       background: #e2e2e2;
       overflow: hidden; }
-    body .content #outputText > p.hide-text::before {
+    body .content #outputText.hide-text::before {
       content: "";
       position: absolute;
       width: 50px;

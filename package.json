@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "lite-server",
     "css": "node-sass --include-path scss style.scss style.css",
-    "watch": "nodemon -e scss -x npm run css"
+    "watch": "nodemon -e scss -x npm run css",
+    "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/dulko-dev/translator_js#readme",
   "dependencies": {
-    "axios": "^0.21.4",
+    "concurrently": "^6.3.0",
     "lite-server": "^2.6.1",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.13"

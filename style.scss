@@ -25,13 +25,13 @@ body {
       background: #ffffff;
       height: 202px;
     }
-    #outputText > p.skeleton {
+    #outputText.skeleton {
       position: relative;
       color: transparent;
       background: #e2e2e2;
       overflow: hidden;
     }
-    #outputText > p.hide-text::before {
+    #outputText.hide-text::before {
       content: "";
       position: absolute;
       width: 50px;

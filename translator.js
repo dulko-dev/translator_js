@@ -7,9 +7,9 @@ const translator = () => {
     secondTextArea.innerText = firstTextArea.value;
   });
 
-  // setTimeout(() => {
-  //   text.classList.remove('hide-text', 'skeleton')
-  // },3000)
+  setTimeout(() => {
+    secondTextArea.classList.remove('hide-text', 'skeleton')
+  },100)
 
 };
 
