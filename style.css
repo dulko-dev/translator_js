@@ -7,10 +7,19 @@ body {
     margin: 0 auto;
     font-family: sans-serif;
     color: #ffffff; }
+    body .content .title {
+      font-size: 140px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: url("./bg-flags.jpg");
+      background-size: cover;
+      background-position: 50% 20%;
+      color: transparent;
+      margin-top: 0; }
     body .content .first-template {
       display: flex; }
     body .content #postText,
-    body .content #outputText {
+    body .content .outputText {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       padding: 20px;
@@ -18,13 +27,14 @@ body {
       font-size: 15px;
       color: #000000;
       background: #ffffff;
-      height: 202px; }
-    body .content #outputText.skeleton {
+      height: 202px;
+      overflow: auto; }
+    body .content .outputText.skeleton {
       position: relative;
       color: transparent;
       background: #e2e2e2;
       overflow: hidden; }
-    body .content #outputText.hide-text::before {
+    body .content .outputText.hide-text::before {
       content: "";
       position: absolute;
       width: 50px;

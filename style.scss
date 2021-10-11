@@ -9,11 +9,21 @@ body {
     margin: 0 auto;
     font-family: sans-serif;
     color: #ffffff;
+    .title {
+      font-size: 140px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: url("./bg-flags.jpg");
+      background-size: cover;
+      background-position: 50% 20%;
+      color: transparent;
+      margin-top: 0;
+    }
     .first-template {
       display: flex;
     }
     #postText,
-    #outputText {
+    .outputText {
       width: 100%;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -24,14 +34,15 @@ body {
       color: #000000;
       background: #ffffff;
       height: 202px;
+      overflow: auto;
     }
-    #outputText.skeleton {
+    .outputText.skeleton {
       position: relative;
       color: transparent;
       background: #e2e2e2;
       overflow: hidden;
     }
-    #outputText.hide-text::before {
+    .outputText.hide-text::before {
       content: "";
       position: absolute;
       width: 50px;

@@ -1,16 +1,31 @@
 const translator = () => {
   const firstTextArea = document.querySelector("#postText");
-  const secondTextArea = document.querySelector("#outputText");
-  const text = document.querySelector('#outputText > p')
+  const text = document.querySelector(".outputText");
+  const btn = document.querySelector("button");
 
-  firstTextArea.addEventListener("input", () => {
-    secondTextArea.innerText = firstTextArea.value;
+  btn.addEventListener("click", () => {
+    if (text.innerText.length > 0) return;
+    text.classList.add("hide-text", "skeleton");
+    text.innerText = firstTextArea.value;
+    setTimeout(() => {
+      text.classList.remove("hide-text", "skeleton");
+    }, 1000);
   });
 
-  setTimeout(() => {
-    secondTextArea.classList.remove('hide-text', 'skeleton')
-  },100)
+  firstTextArea.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      text.classList.add("hide-text", "skeleton");
+      text.innerText = firstTextArea.value;
+      setTimeout(() => {
+        text.classList.remove("hide-text", "skeleton");
+      }, 1000);
+    }
+  });
 
+  firstTextArea.oninput = function () {
+    text.innerText = "";
+  };
 };
 
 export default translator;

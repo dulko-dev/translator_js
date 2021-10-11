@@ -1,6 +1,6 @@
 const worldLive = () => {
   const inputText = document.getElementById("postText");
-  const outputText = document.getElementById("outputText");
+  const outputText = document.querySelector(".outputText");
   const wordCountIn = document.querySelector(".word-count-input");
   const characterCountIn = document.querySelector(".character-count-input");
   const wordCountOut = document.querySelector(".word-count-output");
@@ -9,7 +9,6 @@ const worldLive = () => {
   function inPutForm() {
     inputText.addEventListener("input", () => {
       characterCountIn.innerText = inputText.value.length;
-
       let text = inputText.value.trim();
       let regex = /\s+/;
       if (text.length === 0) {

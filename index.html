@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="notranslate">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,13 +12,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Language translator</title>
+    <title class="notranslate">Language translator</title>
   </head>
   <body>
     <div class="content">
-      <h1>Text Translator</h1>
+      <h1 class="title notranslate">Text Translator</h1>
       <section>
-        <div class="first-template">
+        <div class="first-template notranslate">
           <label for="postText"></label>
           <textarea
             name=""
@@ -38,11 +38,10 @@
             </div>
           </div>
         </div>
-        <label for="lang"></label>
         <div id="google_translate_element"></div>
         <div class="first-template">
-          <div id="outputText" class="translate skeleton hide-text"></div>
-          <div class="count">
+          <div class="outputText"></div>
+          <div class="count notranslate">
             <div>
               <p class="word-count-output">0</p>
               <p>Words</p>
@@ -54,6 +53,7 @@
           </div>
         </div>
       </section>
+      <button class="notranslate" type="button">Translate</button>
     </div>
     <script src="app.js" defer type="module"></script>
     <script
@@ -63,7 +63,7 @@
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-          { pageLanguage: "en" },
+          { pageLanguage: "pl" },
           "google_translate_element"
         );
       }
