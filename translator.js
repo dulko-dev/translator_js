@@ -4,7 +4,7 @@ const translator = () => {
   const btn = document.querySelector("button");
 
   btn.addEventListener("click", () => {
-    if (text.innerText.length > 0) return;
+    if (text.innerText.length > 0 || firstTextArea.value.length === 0) return;
     text.classList.add("hide-text", "skeleton");
     text.innerText = firstTextArea.value;
     setTimeout(() => {
@@ -15,6 +15,7 @@ const translator = () => {
   firstTextArea.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
+      if (firstTextArea.value.length === 0 || text.innerText.length > 0) return;
       text.classList.add("hide-text", "skeleton");
       text.innerText = firstTextArea.value;
       setTimeout(() => {

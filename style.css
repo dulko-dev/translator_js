@@ -1,7 +1,9 @@
 body {
-  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); }
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  top: 0px !important;
+  margin: 0; }
   body > .skiptranslate {
-    display: none; }
+    display: none !important; }
   body .content {
     max-width: 1000px;
     margin: 0 auto;
@@ -26,9 +28,15 @@ body {
       resize: none;
       font-size: 15px;
       color: #000000;
-      background: #ffffff;
+      background-color: #ffffff;
       height: 202px;
-      overflow: auto; }
+      overflow: auto;
+      border: 1px solid #ffffff;
+      transition: 0.5s background-color; }
+    body .content #postText:focus {
+      transition: 0.5s background-color;
+      background-color: #d3d3d3;
+      outline: none; }
     body .content .outputText.skeleton {
       position: relative;
       color: transparent;
@@ -50,6 +58,7 @@ body {
     body .content .count {
       background: #000000;
       border: 1px solid #ffffff;
+      border-left-style: none;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -60,6 +69,18 @@ body {
     body .content #google_translate_element {
       display: block;
       margin: 10px 0; }
+    body .content .btn {
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color: #b2b2b2;
+      border-color: #b2b2b2;
+      margin-top: 20px;
+      transition: 0.5s background-color;
+      border-radius: 5px; }
+      body .content .btn:hover {
+        background-color: inherit;
+        color: #b2b2b2;
+        transition: 0.4s background-color; }
 
 @keyframes gradient-animation {
   from {
