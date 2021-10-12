@@ -15,7 +15,6 @@
     <tr>
       <td>
         <p>This is a simple translator page</p>
-        <p>This project was bootstrapped with - <a href='https://github.com/facebook/create-react-app' <p>Create React App </p></a></p>
       </td>
     </tr>
   </table>
@@ -26,7 +25,7 @@ Project is created with:
   <li>javascript</li>
   <li>scss</li>
   <li>google translate API</li>
-  </ul>
+</ul>
 
 ## Build Process
 <ol>
