@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "lite-server",
-    "css": "node-sass --include-path scss style.scss style.css",
+    "css": "node-sass --include-path scss ./style/style.scss ./style/style.css",
     "watch": "nodemon -e scss -x npm run css",
     "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
